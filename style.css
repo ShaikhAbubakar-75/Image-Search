@@ -1,0 +1,138 @@
+:outset {
+  color-scheme: light dark;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: light-dark(#fff, #444);
+  color: light-dark(#444, #fff);
+  line-height: 1.5;
+}
+.ml9 {
+  text-align: center;
+  position: relative;
+  font-weight: 500;
+  font-size: 3rem;
+  margin: .2em;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#search-input {
+  font-family: "Josefin Sans", sans-serif;
+  width: 50%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+#search-input:focus {
+  outline-style: outset;
+}
+button {
+  font-family: "Josefin Sans", sans-serif;
+  width: 30%;
+  max-width: 100px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+  font-size: 1rem;
+  margin-left: 1em;
+  cursor: pointer;
+}
+.search-result {
+  display: flex;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.image {
+  margin-bottom: 2.5em;
+  width: 30%;
+  height: 100%;
+  box-shadow: 0 0 6px rgb(0, 0, 0, 0.2);
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all .5s ease-in-out;
+}
+.image:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  transform: scale(1.02);
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.search-result a {
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration-line: none;
+  color: inherit;
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin: 12px;
+}
+#more-button {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  max-width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .image {
+    width: 45%;
+  }
+  .search-result {
+    padding: 1em;
+  }
+}
+@media (max-width: 480px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  button {
+    width: 40%;
+    max-width: 400px;
+  }
+  .search-result {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .image {
+    width: 100%;
+  }
+  .image a {
+    padding: 0.5em;
+  }
+}
