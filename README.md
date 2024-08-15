@@ -5,7 +5,6 @@
 
 <h2>Installation</h2>
 <p>git clone https://github.com/ShaikhAbubakar-75/Image-Search.git</p>
-<p>cd Image-Search</p>
 <p>npm install</p>
 
 <h2>Usage</h2>
